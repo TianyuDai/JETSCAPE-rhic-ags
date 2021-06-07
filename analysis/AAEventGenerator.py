@@ -29,6 +29,5 @@ for i, new_pT_hat_min in enumerate(pTHat_list[:-1]):
         pT_hat_max.set('updated', 'yes')
 
         tree.write(current_path+'/../config/jetscape_user_AA200.xml', xml_declaration=True, encoding='utf-8')
-    print(current_path+'/../build/runJetscape '+current_path+'/../config/jetscape_user_AA200.xml')
-    # os.system(current_path+'/../build/runJetscape '+current_path+'/../config/jetscape_user_AA200.xml')
+    os.system(current_path+'/../build/runJetscape '+current_path+'/../config/jetscape_user_AA200.xml')
 

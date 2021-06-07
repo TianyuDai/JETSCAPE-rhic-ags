@@ -7,7 +7,7 @@
   <JetScapeWriterAscii> on </JetScapeWriterAscii>
 
   <ReuseHydro> True </ReuseHydro>
-  <nReuseHydro> 1000 </nReuseHydro>
+  <nReuseHydro> 100000 </nReuseHydro>
   <Random>
     <seed>0</seed>
   </Random>
@@ -62,7 +62,7 @@
       <MUSIC_input_file>music_input</MUSIC_input_file>
       <output_evolution_to_file>1</output_evolution_to_file>
       <shear_viscosity_eta_over_s>0.08</shear_viscosity_eta_over_s>
-      <freezeout_temperature>0.16</freezeout_temperature>
+      <freezeout_temperature>-1</freezeout_temperature>
       <Perform_CooperFrye_Feezeout>0</Perform_CooperFrye_Feezeout>
     </MUSIC>
   </Hydro>
@@ -80,7 +80,7 @@
 
     <Martini>
       <alpha_s> 0.3 </alpha_s>
-      <pcut> 1.0 </pcut>
+      <pcut> 2. </pcut>
       <Q0> 1.0 </Q0>
       <hydro_Tc> 0.16 </hydro_Tc>
     </Martini>
