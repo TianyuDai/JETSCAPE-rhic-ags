@@ -309,6 +309,7 @@ include_directories(./external_packages/)
 include_directories(./external_packages/gtl/include )
 include_directories(./external_packages/hydro_from_external_file )
 include_directories(./examples/ )
+include_directories(./analysis/ )
 
 
 ### include_directories will be expanded as packages are found
@@ -404,6 +405,12 @@ target_link_libraries(FinalStateHadrons JetScape )
 
 add_executable(FinalStatePartons ./examples/FinalStatePartons.cc)
 target_link_libraries(FinalStatePartons JetScape )
+
+add_executable(ppAnalysis ./analysis/ppAnalysis.cc)
+target_link_libraries(ppAnalysis JetScape )
+
+add_executable(AAAnalysis ./analysis/AAAnalysis.cc)
+target_link_libraries(AAAnalysis JetScape )
 
 # executables with additional dependencies
 if ( USE_MUSIC AND USE_ISS )

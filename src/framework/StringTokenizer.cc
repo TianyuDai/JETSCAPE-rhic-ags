@@ -91,6 +91,22 @@ bool StringTokenizer::isHadronEntry() const {
   return false;
 }
 
+bool StringTokenizer::isSigmaGenEntry() const {
+  if (buffer.length() == 0)
+    return false; 
+  if (buffer.find("# sigmaGen") < 100)
+    return true; 
+  return false; 
+}
+
+bool StringTokenizer::isSigmaErrEntry() const {
+  if (buffer.length() == 0)
+    return false; 
+  if (buffer.find("# sigmaErr") < 100)
+    return true; 
+  return false; 
+}
+
 ///////////////////////////////////////////////////////////////////////////////
 // reset string buffer, delimiter and the currsor position
 ///////////////////////////////////////////////////////////////////////////////

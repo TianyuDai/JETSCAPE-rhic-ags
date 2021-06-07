@@ -56,6 +56,8 @@ public:
   bool isCommentEntry() const;
   bool isEventEntry() const;
   bool isHadronEntry() const;
+  bool isSigmaGenEntry() const;
+  bool isSigmaErrEntry() const;
 
 private:
   void skipDelimiter();     // ignore leading delimiters

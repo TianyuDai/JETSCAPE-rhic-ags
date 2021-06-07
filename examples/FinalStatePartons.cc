@@ -68,7 +68,7 @@ int main(int argc, char** argv)
 
       if(TotalPartons > 0)
 	{ SN = SN + 1;
-	  dist_output << "#"<<"\t"
+	  /*dist_output << "#"<<"\t"
 		      << reader->GetEventPlaneAngle() <<"\t"
 		      << "Event"
 		      << SN << "ID\t"
@@ -77,7 +77,7 @@ int main(int argc, char** argv)
 		      << "Py"  << "\t"
 		      << "Pz"  << "\t"
 		      << "Eta" <<  "\t"<< "Phi" << endl;
-	  
+	  */
 	  for (int i=0;i<mShowers.size();i++)
 	    {
 	      //cout<<" Analyze parton shower: "<<i<<endl;

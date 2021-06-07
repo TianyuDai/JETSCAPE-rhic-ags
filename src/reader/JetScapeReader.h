@@ -61,6 +61,8 @@ public:
   vector<shared_ptr<Hadron>> GetHadrons() { return hadrons; }
   vector<fjcore::PseudoJet> GetHadronsForFastJet();
   double GetEventPlaneAngle() const { return EventPlaneAngle; }
+  double GetSigmaGen() { return sigmaGen; } 
+  double GetSigmaErr() { return sigmaErr; } 
 
 private:
   StringTokenizer strT;
@@ -83,6 +85,8 @@ private:
   vector<edge> edgeVec;
   vector<shared_ptr<Hadron>> hadrons;
   double EventPlaneAngle;
+  double sigmaGen; 
+  double sigmaErr; 
 };
 
 typedef JetScapeReader<ifstream> JetScapeReaderAscii;

@@ -14,6 +14,9 @@
  ******************************************************************************/
 
 #include "JetScapeReader.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 #include <sstream>
 
 namespace Jetscape {
@@ -112,7 +115,25 @@ template <class T> void JetScapeReader<T>::Next() {
   while (getline(inFile, line)) {
     strT.set(line);
 
-    if (strT.isCommentEntry()) {
+    if (strT.isSigmaGenEntry()) {
+      string token_s;
+      while (!strT.done()) {
+        token_s = strT.next();
+        if (token_s.compare("#") != 0 && token_s.compare("sigmaGen") != 0) sigmaGen = stod(token_s); 
+      }
+      continue;  
+    }
+
+    if (strT.isSigmaErrEntry()) {
+      string token_s;
+      while (!strT.done()) {
+        token_s = strT.next();
+        if (token_s.compare("#") != 0 && token_s.compare("sigmaErr") != 0) sigmaErr = stod(token_s); 
+      }
+     continue;  
+    }
+
+    if (strT.isCommentEntry() && !(strT.isSigmaGenEntry()) && !(strT.isSigmaErrEntry())) {
 
       if (line.find(EPAngleStr) != std::string::npos) {
         std::stringstream data(line);

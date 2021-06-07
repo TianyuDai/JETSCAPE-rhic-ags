@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<jetscape>
+  
+  <nEvents> 500 </nEvents>
+  
+  <outputFilename updated="yes">/home/jetscape-user/JETSCAPE/analysis/../../JETSCAPE-output/pp2760/500.000000</outputFilename>
+  <JetScapeWriterAscii> on </JetScapeWriterAscii>
+  
+  
+  <Hard>
+    <PythiaGun>
+      <pTHatMin updated="yes">500.0</pTHatMin>
+      <pTHatMax updated="yes">1380.0</pTHatMax>
+      <eCM>2760</eCM>
+    </PythiaGun>
+  </Hard>
+  
+  
+  <Eloss>
+    <Matter> 
+      <Q0> 1.0 </Q0>
+      <in_vac> 1 </in_vac>
+      <vir_factor> 0.25 </vir_factor>
+      <recoil_on> 0 </recoil_on>
+      <broadening_on> 0 </broadening_on>
+      <brick_med> 0 </brick_med>
+    </Matter>
+  </Eloss>
+  
+  
+  <JetHadronization>
+    <name>colorless</name>
+  </JetHadronization>
+  
+</jetscape>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+
+<jetscape>
+  
+  <nEvents> 10000 </nEvents>
+  
+  <!--  JetScape Writer Settings -->
+  <outputFilename>brick_out</outputFilename>
+  <JetScapeWriterAscii> on </JetScapeWriterAscii>
+
+  <!-- Hard Process -->
+  <Hard>
+    <PGun>
+      <pT>120</pT>
+      <parID>21</parID>
+    </PGun>
+  </Hard>
+  
+  <!-- Hydro  Module  -->
+  <Hydro>
+    <Brick>
+      <T>0.2</T>
+    </Brick>
+  </Hydro>
+  
+  <!--Eloss Modules -->
+  <Eloss>
+
+    <deltaT>0.01</deltaT>
+    <maxT>1</maxT>
+
+    <Martini>
+      <alpha_s> 0.3 </alpha_s>
+      <pcut> 1.0 </pcut>
+    </Martini>
+  </Eloss>
+  
+</jetscape>
+

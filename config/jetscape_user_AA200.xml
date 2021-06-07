@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8'?>
+<jetscape>
+  
+  <nEvents> 500 </nEvents>
+  
+  <outputFilename updated="yes">/home/jetscape-user/JETSCAPE/build/../../JETSCAPE-output/AuAu200/60.000000</outputFilename>
+  <JetScapeWriterAscii> on </JetScapeWriterAscii>
+
+  <ReuseHydro> True </ReuseHydro>
+  <nReuseHydro> 1000 </nReuseHydro>
+  <Random>
+    <seed>0</seed>
+  </Random>
+
+  
+  <IS>
+    
+    
+    
+    
+    <grid_max_x> 15 </grid_max_x>
+    <grid_max_y> 15 </grid_max_y>
+    <grid_max_z> 0.0 </grid_max_z>
+    <grid_step_x> 0.3 </grid_step_x>
+    <grid_step_y> 0.3 </grid_step_y>
+    <grid_step_z> 0.3 </grid_step_z>
+
+    <Trento> 
+                <PhysicsInputs cross-section="4.2" normalization="13." projectile="Au" sqrts="200" target="Au">
+                </PhysicsInputs>
+                <CutInputs centrality-high="20" centrality-low="10">
+                </CutInputs>
+                
+                <TransInputs fluctuation="0.9" nucleon-min-dist="0.4" nucleon-width="0.8" reduced-thickness="0.1">
+                </TransInputs>
+                <LongiInputs jacobian="0.8" mean-coeff="0.0" skew-coeff="0.0" skew-type="1" std-coeff="100.0">
+                </LongiInputs>
+
+
+    </Trento>
+  </IS>
+  
+  
+  <Hard>
+    <PythiaGun>
+      <pTHatMin updated="yes">60.0</pTHatMin>
+      <pTHatMax updated="yes">100.0</pTHatMax>
+      <eCM>200</eCM>
+      <FSR_on>0</FSR_on>
+    </PythiaGun>
+  </Hard>
+  
+  
+  <Preequilibrium>
+    <NullPreDynamics> </NullPreDynamics>
+  </Preequilibrium>
+  
+  
+  <Hydro>
+    <MUSIC>
+      <name>MUSIC</name>
+      <MUSIC_input_file>music_input</MUSIC_input_file>
+      <output_evolution_to_file>1</output_evolution_to_file>
+      <shear_viscosity_eta_over_s>0.08</shear_viscosity_eta_over_s>
+      <freezeout_temperature>0.16</freezeout_temperature>
+      <Perform_CooperFrye_Feezeout>0</Perform_CooperFrye_Feezeout>
+    </MUSIC>
+  </Hydro>
+  
+  
+  <Eloss>
+
+    <deltaT>0.01</deltaT>
+    <maxT>20.</maxT>
+
+    <Matter>
+      <in_vac> 1 </in_vac>
+      <Q0> 1.0 </Q0>
+    </Matter>
+
+    <Martini>
+      <alpha_s> 0.3 </alpha_s>
+      <pcut> 1.0 </pcut>
+      <Q0> 1.0 </Q0>
+      <hydro_Tc> 0.16 </hydro_Tc>
+    </Martini>
+
+  </Eloss>
+
+
+  
+  <JetHadronization>
+    <name>colorless</name>
+  </JetHadronization>
+  
+</jetscape>
