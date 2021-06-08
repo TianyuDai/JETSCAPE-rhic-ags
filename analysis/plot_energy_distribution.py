@@ -20,6 +20,5 @@ plt.title("Energy distribution of final partons, $E_0 = 120$ GeV")
 plt.xlabel('E (GeV)')
 plt.ylabel('dN/dE')
 plt.yscale('log')
-plt.xlim(1, 120)
-plt.savefig("../../JETSCAPE-output/parton_energy_distribution.pdf")
+plt.savefig("../../JETSCAPE-output/my_parton_energy_distribution.pdf")
 
