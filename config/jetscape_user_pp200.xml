@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <jetscape>
   
-  <nEvents> 500 </nEvents>
+  <nEvents> 2500 </nEvents>
   
   <outputFilename updated="yes">/home/jetscape-user/JETSCAPE/build/../../JETSCAPE-output/pp200/60.000000</outputFilename>
   <JetScapeWriterAscii> on </JetScapeWriterAscii>

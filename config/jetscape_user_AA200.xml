@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <jetscape>
   
-  <nEvents> 500 </nEvents>
+  <nEvents> 2500 </nEvents>
   
-  <outputFilename updated="yes">/home/jetscape-user/JETSCAPE/build/../../JETSCAPE-output/AuAu200/60.000000</outputFilename>
+  <outputFilename updated="yes">../../JETSCAPE-output/AuAu200/60.000000</outputFilename>
   <JetScapeWriterAscii> on </JetScapeWriterAscii>
 
   <ReuseHydro> True </ReuseHydro>
@@ -60,10 +60,6 @@
     <MUSIC>
       <name>MUSIC</name>
       <MUSIC_input_file>music_input</MUSIC_input_file>
-      <output_evolution_to_file>1</output_evolution_to_file>
-      <shear_viscosity_eta_over_s>0.08</shear_viscosity_eta_over_s>
-      <freezeout_temperature>-1</freezeout_temperature>
-      <Perform_CooperFrye_Feezeout>0</Perform_CooperFrye_Feezeout>
     </MUSIC>
   </Hydro>
   

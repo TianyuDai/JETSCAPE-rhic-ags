@@ -3,7 +3,7 @@
   
   <nEvents> 500 </nEvents>
   
-  <outputFilename updated="yes">/home/jetscape-user/JETSCAPE-output/pp2760/500.000000</outputFilename>
+  <outputFilename updated="yes">/home/jetscape-user/JETSCAPE/build/../../JETSCAPE-output/pp2760/500.000000</outputFilename>
   <JetScapeWriterAscii> on </JetScapeWriterAscii>
   
   
@@ -29,8 +29,7 @@
   
   
   <JetHadronization>
-    <name>colorless</name>
+    <name>colored</name>
   </JetHadronization>
   
 </jetscape>
-

@@ -30,18 +30,21 @@ int main(int argc, char** argv)
 {
     int nEvents = 0, i_event=0; 
 
-    vector <double> pTBin{10., 12., 14., 16., 18., 20., 22., 24., 26., 28., 30., 32., 34., 36., 38., 40., 42., 44., 46., 48., 50., 52., 54., 56., 58., 60.};
-    vector <double> pTHatBin{5., 10., 20., 40., 60., 100.}; 
+    vector <double> pTBin{10., 20., 30., 40., 50., 60.};
+    vector <double> pTHatBin{60., 100.}; 
+    // vector <double> pTHatBin{5., 10., 20., 40., 60., 100.}; 
     vector <double> sigmaGen(pTHatBin.size()-1);  
     vector <double> sigmaErr(pTHatBin.size()-1, 100.);  
 
     std::ofstream jet_output (argv[2]);
-    // std::ofstream jet_output (getcwd_string()+"/../../JETSCAPE-output/AuAu200/pp200_chargedHadron.txt");
+    // std::ofstream jet_output (getcwd_string()+"/../../JETSCAPE-output/AuAu200/AuAu200_chargedHadron.txt");
     std::vector <double> hadron_cs(pTBin.size()-1, 0.), hadron_cs_err(pTBin.size()-1, 0.), pTAvg(pTBin.size()-1, 0.), total_sigma(pTBin.size()-1, 0.); 
     std::vector<std::vector <int>> hadron_ct(pTHatBin.size()-1);
     std::vector<std::vector <int>> hadron_ct_sq(pTHatBin.size()-1);
     for (unsigned int iBin = 0; iBin < pTHatBin.size() - 1; iBin++)
     {
+	std::cout << argv[1]+std::to_string(pTHatBin[iBin]) << "\n"; 
+        // auto reader=make_shared<JetScapeReaderAscii>(getcwd_string()+"/../../JETSCAPE-output/AuAu200/"+std::to_string(pTHatBin[iBin])+".dat"); 
         auto reader=make_shared<JetScapeReaderAscii>(argv[1]+std::to_string(pTHatBin[iBin])+".dat");  
         hadron_ct[iBin] = std::vector<int>(pTBin.size()-1, 0); 
         hadron_ct_sq[iBin] = std::vector<int>(pTBin.size()-1, 0);
@@ -84,7 +87,6 @@ int main(int argc, char** argv)
             }
 	}
 	nEvents = i_event + 1;
-
 	for (unsigned int ipT = 0; ipT < pTBin.size() - 1; ipT++)
 	{
             if (hadron_ct[iBin][ipT] > 0)
